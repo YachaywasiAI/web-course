@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Second challenge: Week 02">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02-Option</title>
+  <style>
+    /* reset default params of browsers */
+    * {
+      margin: 0;
+      padding: 0;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: white;
+      /* -webkit-background-size: cover;
+      background-size: cover;
+      background-attachment: fixed; */
+    }
+
+    .container .form {
+      font-weight: normal;
+      background: rgb(240, 240, 240);
+      width: 20%;
+      /* for center, set margin to auto */
+      margin: auto;
+      padding: 15px 35px;
+      margin-top: 50px;
+    }
+
+    .container .form .form-label {
+      display: block;
+      padding: 15px 0 0 0;
+    }
+
+    .container .form .form-input, .form-textarea {
+      width: 100%;
+      border: 1px solid;
+      height: 30px;
+      border-color: rgb(184, 184, 184);
+    }
+
+    .container .form .form-textarea {
+      height: 50px;
+      resize: vertical;
+      max-height: 150px;
+      min-height: 50px;
+    }
+
+    .container .form .checkbox-block {
+      margin-top: 20px;
+    }
+
+    .container .form .button-submit {
+      display: block;
+      margin-top: 20px;
+      height: 30px;
+      width: 25%;
+      color: white;
+      background-color: rgb(23, 97, 255);
+      border: none;
+    }
+
+    .container .form .button-submit:hover {
+      background-color: rgb(101, 150, 255);
+      cursor: pointer;
+      border: none;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="container">
+      <form class="form">
+        <h1 class="form-title">Sign Up</h1>
+        <label for="firstName" class="form-label">First name</label>
+        <input type="text" id="firstName" class="form-input" required pattern="[A-Z a-z]{6,}">
+        <label for="age" class="form-label">Age</label>
+        <input type="number" id="age" class="form-input" required min="0" max="120">
+        <label for="Income" class="form-label">Income</label>
+        <input type="number" id="income" class="form-input" required>
+        <label for="moreInfo" class="form-label">More Info</label>
+        <textarea id="moreInfo" class="form-textarea"></textarea>
+        <label class="form-label">Gender</label>
+        <input type="radio" id="male" name="gender">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender">
+        <label for="female">Female</label>
+        <input type="radio" id="trans" name="gender">
+        <label for="trans">Trans</label>
+        <label class="form-label">Plan</label>
+        <select class="form-input">
+          <option selected disabled>Select Plan</option>
+          <option value="1">Essentials</option>
+          <option value="2">First responder</option>
+          <option value="3">Magenta</option>
+          <option value="4">Magenta Max</option>
+        </select>
+        <input type="checkbox" id="checkboxSuscribe" class="checkbox-block"value="SN">
+        <label for="checkboxSuscribe" ckass="checkbox-block">Suscribe to Newsletter</label>
+        <input type="submit" value="Update" class="button-submit">
+      </form>
+    </section>
+  </main>
+</body>
+</html>

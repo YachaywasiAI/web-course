@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1>Register</h1>
+  </header>
+  <main>
+    <section>
+      <!--Here well make our registration form-->
+      <form>
+        <p>Fill in the requested information</p>
+        <label for="name">Name</label>
+        <input type="text" placeholder="Ex. Marcell" id="name" required minlength="3", maxlength="12", pattern="[A-Z a-z]+">
+        <br>
+        <label for="lastName">Last Name</label>
+        <input type="text" placeholder="Ex. Llerena" id="lastName" required>
+        <br>
+        <label for="email">Email</label>
+        <input type="email" placeholder="email@gmail.com" id="email" required pattern="[A-Z a-z 0-9]{1,}@[A-Z a-z 0-9]{1,}.[A-Z a-z]{2,}">
+        <br>
+        <label for="password">New Password</label>
+        <input type="password" placeholder="Create a new password" id="password">
+        <br>
+        <label for="age">Age</label>
+        <input type="number" placeholder="Enter your age" id="age" min="0" max="120">
+        <br>
+        <label>Sex</label>
+        <br>
+        <input type="radio" name="sex"> Male
+        <input type="radio" name="sex"> Female
+        <input type="radio" name="sex"> Alien
+        <br>
+        <label>Hobbies</label>
+        <br>
+        <input type="checkbox" value="cars">Cars
+        <br>
+        <input type="checkbox" value="travel">Travel
+        <br>
+        <input type="checkbox" value="dance">Dance
+        <br>
+        <input type="checkbox" value="videogames">Videogames
+        <br>
+        <input type="checkbox" value="read">Read
+        <br>
+        <br>
+        <label>City</label>
+        <select>
+          <option selected disabled>Pick a city...</option>
+          <option value="LI">Lima</option>
+          <option value="AR">Arequipa</option>
+          <option value="TR">Trujillo</option>
+          <option value="TA">Tacna</option>
+          <option value="PI">Piura</option>
+        </select>
+        <br>
+        <label>Biography</label>
+        <br>
+        <textarea></textarea>
+        <hr>
+        <input type="submit" value="Send">
+
+      </form>
+    </section>
+  </main>
+</body>
+</html>
