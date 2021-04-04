@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Second challenge: Week 02">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>02-Option</title>
   <style>
-    /* reset default params of browsers */
     * {
       margin: 0;
       padding: 0;
@@ -16,69 +15,70 @@
     }
 
     body {
-      background-color: white;
-      /* -webkit-background-size: cover;
-      background-size: cover;
-      background-attachment: fixed; */
+      font-family: sans-serif;
+      margin-block-start: 20vh;
+    }
+
+    h1 {
+      font-size: larger;
+      padding-bottom: 10px;
+      padding-top: 30px;
+    }
+
+    .container {
+      background-color: rgb(226, 226, 226);
+      max-width: 350px;
+      margin: auto;
     }
 
     .container .form {
-      font-weight: normal;
-      background: rgb(240, 240, 240);
-      width: 30%;
-      /* for center, set margin to auto */
       margin: auto;
-      padding: 15px 35px;
-      margin-top: 50px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      max-width: 300px;
     }
 
-    .container .form .form-label {
+    .container .form .formLabel {
       display: block;
-      padding: 15px 0 0 0;
+      padding-top: 15px;
+      font-size: small;
+      font-weight: bold;
     }
 
-    .container .form .form-input, .form-textarea {
-      width: 100%;
+    .container .form .formInput {
       border: 1px solid;
       height: 30px;
       border-color: rgb(184, 184, 184);
     }
 
-    .container .form .form-textarea {
+    .container .form .formInput, .formTextarea {
+      width: 100%;
+    }
+
+    .container .form .formTextarea {
       height: 50px;
       resize: vertical;
       max-height: 150px;
       min-height: 50px;
     }
 
-    .container .form .checkbox-block {
+    .container .form .checkboxButton {
       margin-top: 20px;
     }
 
-    .container .form .button-submit {
-      display: block;
-      margin-top: 20px;
-      height: 30px;
-      width: 25%;
-      color: white;
-      background-color: rgb(23, 97, 255);
+    .container .form .submitButton {
+      width: 100px;
+      height: 35px;
+      margin-top: 30px;
+      margin-bottom: 30px;
       border: none;
+      background-color:rgb(0, 119, 255);
+      color: white;
+      -webkit-appearance: none;
     }
 
-    .container .form .button-submit:hover {
-      background-color: rgb(101, 150, 255);
+    .container .form .submitButton:hover {
+      background-color: rgb(255, 61, 61);
       cursor: pointer;
       border: none;
-    }
-
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
     }
 
     input[type=number] {
@@ -90,33 +90,33 @@
   <main>
     <section class="container">
       <form class="form">
-        <h1 class="form-title">Sign Up</h1>
-        <label for="firstName" class="form-label">First name</label>
-        <input type="text" id="firstName" class="form-input" required pattern="[A-Z a-z]{6,}">
-        <label for="age" class="form-label">Age</label>
-        <input type="number" id="age" class="form-input" required min="0" max="120">
-        <label for="Income" class="form-label">Income</label>
-        <input type="number" id="income" class="form-input" required>
-        <label for="moreInfo" class="form-label">More Info</label>
-        <textarea id="moreInfo" class="form-textarea"></textarea>
-        <label class="form-label">Gender</label>
+        <h1>Sign Up</h1>
+        <label for="firstName" class="formLabel">First name</label>
+        <input type="text" id="firstName" class="formInput" required pattern="[A-Z a-z]{6,}">
+        <label for="age" class="formLabel">Age</label>
+        <input type="number" id="age" class="formInput" required min="0" max="120">
+        <label for="Income" class="formLabel">Income</label>
+        <input type="number" id="income" class="formInput" required>
+        <label for="moreInfo" class="formLabel">More Info</label>
+        <textarea id="moreInfo" class="formTextarea" required minlength="6"></textarea>
+        <label class="formLabel">Gender</label>
         <input type="radio" id="male" name="gender">
         <label for="male">Male</label>
         <input type="radio" id="female" name="gender">
         <label for="female">Female</label>
         <input type="radio" id="trans" name="gender">
         <label for="trans">Trans</label>
-        <label class="form-label">Plan</label>
-        <select class="form-input">
+        <label class="formLabel">Plan</label>
+        <select class="formInput">
           <option selected disabled>Select Plan</option>
           <option value="1">Essentials</option>
           <option value="2">First responder</option>
           <option value="3">Magenta</option>
           <option value="4">Magenta Max</option>
         </select>
-        <input type="checkbox" id="checkboxSuscribe" class="checkbox-block"value="SN">
-        <label for="checkboxSuscribe" ckass="checkbox-block">Suscribe to Newsletter</label>
-        <input type="submit" value="Update" class="button-submit">
+        <input type="checkbox" id="checkboxSuscribe" class="checkboxButton"value="SN">
+        <label for="checkboxSuscribe" class="checkboxButton">Suscribe to Newsletter</label>
+        <input type="submit" value="Update" class="submitButton">
       </form>
     </section>
   </main>
