@@ -1,87 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="First challenge: Week 02">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>01-Option</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: white;
+      font-family: sans-serif;
+      margin-block-start: 20vh;
+    }
+
+    header h1 {
+      font-size: large;
+    }
+
+    header h2 {
+      font-size: small;
+    }
+
+    header, main {
+      text-align: center;
+    }
+
+    .container .form {
+      width: 18vw;
+      margin: auto;
+      padding-top: 15px;
+    }
+
+    .container .form .formInput {
+      display: block;
+      margin: auto;
+      margin-bottom: 15px;
+      height: 50px;
+      width: 100%;
+    }
+
+    .container .form .submitButton {
+      width: 100px;
+      height: 35px;
+      border: none;
+      background-color:rgb(0, 165, 82);
+      color: white;
+    }
+
+    .container .form .submitButton:hover {
+      background-color: rgb(255, 61, 61);
+      cursor: pointer;
+      border: none;
+    }
+  </style>
 </head>
-
-<style>
-  body{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    height: 100vh;
-    background-color: white;
-  }
-
-  .box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .box h1{
-    text-align: center;
-    font-size: 14px;
-  }
-
-  .box h2{
-    text-align: center;
-    font-size: 10px;
-    color: rgb(73, 73, 73);
-  }
-
-  .box form{
-    text-align: center;
-  }
-
-  .text_field{
-    width:70%;
-    display: block;
-    margin: 20px auto;
-  }
-
-  .text_field input{
-    width: 50%;
-    height: 50px;
-    margin-top: 10px;
-  }
-
-  input[type="submit"]{
-    height: 40px;
-    width: 20%;
-    border: 1px solid;
-    background-color: rgb(0, 165, 82);
-    color: white;
-    border-color: transparent;
-  }
-
-  input[type="submit"]:hover{
-    background-color: red;
-    border-color: transparent;
-    cursor: pointer;
-  }
-
-
-</style>
-
 <body>
-  <div class="box">
+  <header>
     <h1>CREATE YOUR ACCOUNT</h1>
-    <h2>This is a step 1</h2>
-    <form method="post">
-      <div class="text_field">
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Password" required>
-        <input type="password" placeholder="Confirm Password" required>
-      </div>
-      <input type="submit" value="Next">
-    </form>
-  </div>
+    <h2>This is step 1</h2>
+  </header>
+  <main>
+    <section class="container">
+      <form class="form">
+        <input type="text" id="email" class="formInput" placeholder="Email" required pattern="[A-Z a-z 0-9]{1,}@[A-Z a-z 0-9]{1,}.[A-Z a-z]{2,}">
+        <input type="text" id="password" class="formInput" placeholder="Password" required>
+        <input type="text" id="confirmPassword" class="formInput" placeholder="Confirm Password" required>
+        <input type="submit" value="Next" class="submitButton">
+      </form>
+    </section>
+  </main>
 </body>
-
 </html>
