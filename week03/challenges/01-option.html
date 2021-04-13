@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+    <title>01-Option 03-Week</title>
+    <style>
+      * {
+        border: 0;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        /* border: 1px solid teal; */
+      }
+
+      body {
+        height: 100vh;
+      }
+
+      header {
+        min-height: 30vh;
+        text-align: center;
+        background-color: black;
+        color: white;
+        font-family: 'Segoe UI', Verdana, sans-serif;
+      }
+
+      .iconMenu {
+        font-size: 24px;
+        text-align: left;
+        padding: 8px 16px;
+      }
+
+      h4 {
+        padding-top: 64px;
+        font-size: 20px;
+        font-weight: 400;
+      }
+
+      h1 {
+        padding-top: 8px;
+        font-size: 48px;
+        font-weight: 400;
+      }
+
+      .containerButton {
+        padding-top: 48px;
+        padding-bottom: 32px;
+        /* padding-bottom: 100px !important; */
+      }
+
+
+      /* header > * {
+        margin-top: 30px;
+      } */
+
+      .learnButton {
+        padding: 8px 16px;
+        /* margin-bottom: 20px; */
+        font-size: 24px;
+        font-weight: 900;
+        background-color: rgb(80, 80, 80);
+        color: white;
+        border: none;
+        cursor: pointer;
+        -webkit-appearance: none;
+      }
+
+      .learnButton:hover {
+        color: black;
+        background-color: rgb(216, 216, 216);
+      }
+
+      h3 {
+        font-size: 24px;
+        font-weight: 400;
+        margin-top: 16px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 15px;
+        margin-bottom: 16px;
+      }
+
+      .iconsFig {
+        font-size: 124px;
+        margin-bottom: 32px;
+      }
+
+      main {
+        display: flex;
+        justify-content: space-evenly;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        /* height: 50%; */
+        min-height: 60vh;
+      }
+
+      main > * {
+        width: 32.33%;
+        margin-top: 20px;
+        /* margin-bottom: 100px; */
+        text-align: center;
+      }
+
+      section {
+        border: 1px solid rgba(0, 0, 0, 0.16);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+        /* height:auto; */
+        /* min-height: 100%; */
+      }
+
+      /* https://stackoverflow.com/questions/35049262/difference-between-justify-content-vs-align-items */
+      /* reference about difference between align-items justify-content */
+
+      @media (max-width: 900px) {
+        main {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        main > * {
+          width: 95%;
+        }
+
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="iconMenu">
+        <i class="fa fa-bars"></i>
+      </div>
+      <h4>BEAUTIFUL RESPONSIVE WEB SITES</h4>
+      <h1>BUILT WITH W3.CSS</h1>
+      <div class="containerButton">
+        <input type="submit" class="learnButton" value="LEARN W3.CSS">
+      </div>
+    </header>
+    <main>
+      <section class="firstSection">
+        <h3>Responsive</h3>
+        <i class="fas fa-desktop iconsFig"></i>
+        <!-- <i class="fa fa-css3 fa-3x" aria-hidden="true"></i> -->
+        <p>Built-in responsiveness</p>
+        <p>Mobile first fluid grid</p>
+        <p>Fits any screen sizes</p>
+        <p>PC Tablet and Mobile</p>
+      </section>
+      <section class="secondSection">
+        <h3>Standard CSS</h3>
+        <i class="fab fa-css3 iconsFig"></i>
+        <p>Standard CSS only</p>
+        <p>Easy to learn</p>
+        <p>No need for jQuery</p>
+        <p>No JavaScript library</p>
+      </section>
+      <section class="thirdSection">
+        <h3>Design</h3>
+        <i class="far fa-gem iconsFig"></i>
+        <p>Paper like design</p>
+        <p>Bold colors and shadows</p>
+        <p>Equal across platforms</p>
+        <p>Equal across devices</p>
+      </section>
+    </main>
+
+  </body>
+</html>

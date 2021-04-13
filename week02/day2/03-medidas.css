@@ -1,0 +1,35 @@
+/* selector para todos los elementos */
+* {
+  border: 1px solid #45FC56;
+}
+
+header {
+  height: 500px;
+  width: 400px;
+  font-size: 24px;
+}
+
+/* em coge el valor del padre como referencia
+por ejemplo 0.5 em seria 18 px en el parrafo
+*/
+
+p {
+  border: 2px solid rgb(120, 200, 240);
+  width: 50%;
+  font-size: 0.5em;
+}
+
+/* el size mas lejano en este caso el body */
+label {
+  font-size: 1rem;
+}
+
+div {
+  border: 4px solid purple;
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 5vw;
+}

@@ -1,0 +1,84 @@
+/* al indicar > solamente utilizo los primeros hijos LI dentro de OL */
+
+ol > li {
+  font-family: Arial;
+  color: red;
+}
+
+ol > ul > li {
+  font-family: Verdana;
+  color:green;
+}
+
+.seccion1 > h2 {
+  color: teal;
+}
+
+#caja > span {
+  background-color: yellow;
+}
+
+h2 {
+  color: tomato;
+}
+
+h2.adicional {
+  background-color: skyblue;
+}
+
+p[name="instrucciones"]{
+  font-style: italic;
+  color: green;
+}
+
+input[placeholder]{
+  background-color: yellowgreen;
+}
+
+input:placeholder-shown{
+  color: blue;
+}
+
+/* PSEUDOCLASSES */
+
+p:nth-child(3) {
+  font-style: italic;
+  font-weight: bold;
+  color: peru;
+}
+
+p:last-child {
+  border: 2px solid orangered;
+}
+
+tr:nth-child(odd) {
+  background-color: salmon;
+}
+
+tr:nth-child(even) {
+  background-color: seagreen;
+}
+
+table, th, td {
+  border: 1px solid black;
+  /* remover espacios entre celdas */
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+tr:nth-child(3), tr:nth-child(4){
+  background-color: palegreen;
+}
+
+/* PSEUDO ELEMENTOS */
+
+#principal::first-letter{
+  color:black;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+li::before {
+  color:purple;
+  content: "-";
+}

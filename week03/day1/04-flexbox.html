@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /* reset */
+      * {
+        margin: 0;
+        padding: 0;
+        /* que el tamano de ancho y alto que indiquemos sea tal cual */
+        box-sizing: border-box;
+        border: 1px solid gray;
+      }
+      /* flexbox */
+      .menu {
+        width: 100%;
+        height: 500px;
+        background-color: lightblue;
+        display: flex;
+        /* me indica la direccion de mis elementos hijos */
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .link {
+        background-color: lightsalmon;
+        height: 50px;
+        width: 100px;
+        padding: 10px
+      }
+
+      .link3 {
+        flex-grow: 3;
+      }
+
+      .link6 {
+        flex-shrink: 2;
+        align-self: flex-end;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="menu">
+      <div class="link">link1</div>
+      <div class="link">link2</div>
+      <div class="link link3">link3</div>
+      <div class="link">link4</div>
+      <div class="link">link5</div>
+      <div class="link link6">link6</div>
+    </nav>
+  </body>
+</html>
