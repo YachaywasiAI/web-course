@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <title>02-Option 03-Week</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* border: 1px solid teal; */
+      }
+
+      body {
+        font-family: "Titillium Web";
+      }
+
+      header {
+        background-color: rgb(58, 0, 165);
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+
+      nav > ul{
+        display: flex;
+        padding: 8px 0px;
+        /* justify-content: space-between; */
+      }
+
+      nav > ul > li {
+        font-weight: 900;
+        text-align: center;
+        width: 100%;
+      }
+
+      h1 {
+        text-align: center;
+        color: rgb(82, 82, 82);
+        margin: 32px 0px;
+        /* margin-bottom: 32px;
+        margin-top: 32px; */
+      }
+
+      img {
+        margin-top: 24px;
+        width: 300px;
+        height: 200px;
+      }
+
+      section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      .card {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        max-width: 300px;
+        margin-left: 16px;
+      }
+
+      aside > ul{
+        display: flex;
+        justify-content: space-between;
+      }
+
+      aside > ul > li {
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        padding: 0px 10px;
+        background-color: rgba(190, 190, 190, 0.3);
+        font-weight: 900;
+        font-size: 16px;
+      }
+
+      p {
+        margin-top: 24px;
+        margin-bottom: 24px;
+      }
+
+      button {
+        background-color: rgb(51, 172, 172);
+        border: none;
+        border-radius: 4px;
+        padding: 10px 100px;
+        color: white;
+        font-weight: 500;
+        font-size: 14px;
+        font-family: Arial;
+        margin-top: 14px;
+        cursor: pointer;
+        -webkit-appearance: none;
+      }
+
+      button:hover {
+        background-color: rgba(51, 172, 172, 0.2);
+      }
+
+      /* @media (max-width: 900px) {
+        .card {
+          justify-content: space-around;
+          margin-bottom: 16px;
+        }
+      } */
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href=""><i class="fas fa-cloud"></i></a></li>
+          <li><a href="">CAMERAS</a></li>
+          <li><a href="">ABOUT</a></li>
+          <li><a href="">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Cameras</h1>
+      <section>
+        <div class="card">
+          <img src="https://www.techadvisor.co.uk/cmsdata/features/3801430/apple_iphone_12_max_review_41.jpg" alt="Smartphone" />
+          <h2>Smartphone</h2>
+          <p>The best camera is the one that you carry 24/7.</p>
+          <aside>
+            <ul>
+              <li>Price: 450 €</li>
+              <li>In Stock</li>
+            </ul>
+            <button>ADD TO CART</button>
+          <aside>
+        </div>
+        <div class="card">
+          <img src="https://c.pxhere.com/photos/93/7a/polaroid_camera_photography_technology_photo_paper_creativity_polaroid_frame-612487.jpg!d" alt="Some Old Polaroid Camera" />
+          <h2>Some Old Polaroid Camera That Produces Hipstery Effects</h2>
+          <p>Get hipstery effects.</p>
+          <aside>
+            <ul>
+              <li>Price: 450 €</li>
+              <li>In Stock</li>
+            </ul>
+            <button>ADD TO CART</button>
+          <aside>
+        </div>
+        <div class="card">
+          <img src="https://media.dcrainmaker.com/images/2016/06/GoPro-Hero4-Silver-LCD-Screen-Resolutions_thumb.jpg" alt=">GoPro Hero 4 Silver" />
+          <h2>GoPro Hero 4 Silver</h2>
+          <p>GoPro is de facto choice for anyone interested in extreme sports. The camera has video, photo and timelapse modes, and the low-light capabilities are exceptional.</p>
+          <aside>
+            <ul>
+              <li>Price: 450 €</li>
+              <li>In Stock</li>
+            </ul>
+            <button>ADD TO CART</button>
+          <aside>
+        </div>
+        <div class="card">
+          <img src="https://c0.wallpaperflare.com/preview/460/571/794/nikon-camera-digital-lens.jpg" alt="Nikon something" />
+          <h2>Nikon Something</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia illo porro iure.</p>
+          <aside>
+            <ul>
+              <li>Price: 450 €</li>
+              <li>In Stock</li>
+            </ul>
+            <button>ADD TO CART</button>
+          <aside>
+        </div>
+        <div class="card">
+          <img src="https://mk0camerajabberhe53n.kinstacdn.com/wp-content/uploads/2021/02/Sony_FX3_04.jpg" alt="Some Konica" />
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia illo porro iure.</p>
+          <aside>
+            <ul>
+              <li>Price: 450 €</li>
+              <li>In Stock</li>
+            </ul>
+            <button>ADD TO CART</button>
+          <aside>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
