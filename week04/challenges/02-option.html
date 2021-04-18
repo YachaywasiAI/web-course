@@ -19,7 +19,7 @@
       display: grid;
       /* grid-template-columns: repeat(10, 10fr); */
       grid-template-columns: repeat(autofill, minmax(50px, 10fr));
-      grid-template-rows: repeat(9, minmax(1fr, 10fr));
+      /* grid-template-rows: repeat(9, minmax(500px, autofill)); */
       /* grid-template-rows: repeat(9, minmax(100px, auto)); */
       /* grid-template-columns: repeat(autofill, minmax(300px, 1fr)); */
       /* grid-template-rows: minmax(50px, 100px); */
@@ -173,8 +173,8 @@
     }
 
     img {
-      height: 50%;
-      overflow: hidden;
+      height: 80%;
+
       /* padding: 50px 50px; */
       /* height: 100%;
       object-fit: cover; */
@@ -183,6 +183,16 @@
       /* min-height: 10%; */
       /* max-height: 100px;
       max-width: 100px; */
+    }
+
+    .items > div {
+      min-height: 100px;
+      min-width: 100px;
+      height: 200px;
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     @media screen and (max-width: 1200px) {
@@ -301,15 +311,15 @@
     <div class="containerButtonShop">
       <input type="submit" class="buttonShop" value="SHOP THE COLLECTION">
     </div>
-    <div class="items item1"><img src="https://picsum.photos/id/48/200/200" alt=""></div>
-    <div class="items item2"><img src="https://picsum.photos/id/48/200/200" alt=""></div>
-    <div class="items item3"><img src="https://picsum.photos/id/48/200/200" alt=""></div>
-    <div class="items item4"><img src="https://picsum.photos/id/48/200/200" alt=""></div>
-    <div class="items item5"><img src="https://picsum.photos/id/48/200/200" alt=""></div>
-    <div class="items item6"><img src="https://picsum.photos/id/48/200/200" alt=""></div>
-    <div class="items item7"><img src="https://picsum.photos/id/48/200/200" alt=""></div>
-    <div class="items item8"><img src="https://picsum.photos/id/48/200/200" alt=""></div>
-    <div class="items item9"><img src="https://picsum.photos/id/48/200/200" alt=""></div>
+    <div class="items item1"><div><img src="https://picsum.photos/id/48/200/200" alt=""></div></div>
+    <div class="items item2"><div><img src="https://picsum.photos/id/48/200/200" alt=""></div></div>
+    <div class="items item3"><div><img src="https://picsum.photos/id/48/200/200" alt=""></div></div>
+    <div class="items item4"><div><img src="https://picsum.photos/id/48/200/200" alt=""></div></div>
+    <div class="items item5"><div><img src="https://picsum.photos/id/48/200/200" alt=""></div></div>
+    <div class="items item6"><div><img src="https://picsum.photos/id/48/200/200" alt=""></div></div>
+    <div class="items item7"><div><img src="https://picsum.photos/id/48/200/200" alt=""></div></div>
+    <div class="items item8"><div><img src="https://picsum.photos/id/48/200/200" alt=""></div></div>
+    <div class="items item9"><div><img src="https://picsum.photos/id/48/200/200" alt=""></div></div>
   </main>
 </body>
 </html>
