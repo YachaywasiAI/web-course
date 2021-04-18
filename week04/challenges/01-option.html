@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01-Option 04-Week</title>
+    <style>
+      * {
+        border: 0;
+        padding: 0;
+        margin: 10px 10px;
+        box-sizing: border-box;
+        /* border: 1px solid gray; */
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(5, 20%);
+        grid-template-rows: repeat(3, minmax(250px, auto));
+        height: 95vh;
+        /* gap: 10px; */
+        /* width: 200vh; */
+        /* grid-column-gap: 10px;
+        grid-row-gap: 10px; */
+        /* justify-content: space-between; */
+      }
+
+      section {
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        font-weight: 900;
+        font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      }
+
+      .one {
+        background: lightseagreen;
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+        /* grid-row-start: 1;
+        grid-row-end: 6; */
+      }
+
+      .two {
+        background: lightskyblue;
+        grid-column: 3 / 6;
+      }
+
+      .three {
+        background: burlywood;
+        grid-column: 3 / 5;
+        grid-row: 2 / 4;
+      }
+
+      .four {
+        background: #be5dff;
+      }
+
+      .five {
+        background: cornflowerblue;
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+      }
+
+      .six {
+        background: rgb(255, 76, 115);
+      }
+
+      /* .two {
+        background: rgb(38, 174, 219);
+        border-radius: 16px;
+        grid-column: 3 / 5;
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+
+      .three {
+        background: rgb(141, 70, 70);
+        border-radius: 16px;
+        grid-column: 4 / 7;
+        grid-
+      }
+
+      .four {
+        background: green;
+        border-radius: 16px;
+        grid-column-start: 5;
+        grid-column-end: 7;
+        grid-row: 4 / 8;
+
+      }
+
+      .five {
+        background: grey;
+        border-radius: 16px;
+        grid-column-start: 5;
+        grid-column-end: 7;
+      } */
+
+      .boxGreen {
+        background: teal;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 5;
+      }
+
+      .boxLightBlue {
+        background: lightblue;
+        grid-column: 3 / 6;
+        grid-row: 1 / 3;
+      }
+
+      .boxPink {
+        background: rgba(255, 183, 195, 0.8);
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 5;
+        grid-row-end: 9;
+      }
+
+
+    </style>
+  </head>
+  <body class="grid">
+    <section class="one">1</section>
+    <section class="two">2</section>
+    <section class="three">3</section>
+    <section class="four">4</section>
+    <section class="five">5</section>
+    <section class="six">6</section>
+    <!-- <section class="seven">7</section>
+    <section class="eight">8</section>
+    <section class="nine">9</section>
+    <section class="ten">10</section>
+    <section class="twelve">12</section>
+    <section class="thirteen">13</section> -->
+    <!-- <header>header</header>
+    <aside>aside</aside>
+    <nav>nav</nav>
+    <main>main</main>
+    <footer>footer</footer> -->
+  </body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      * {
+        border: 0;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        border: 1px solid teal;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-rows: 100px 30px 100px 100px 50px;
+        grid-template-columns: 250px 250px 250px 150px;
+        grid-row-gap: 10px;
+        grid-column-gap: 10px;
+        color: white;
+      }
+
+      .grid div {
+        background: red;
+      }
+
+      .grid div:nth-child(even) {
+        background: blue;
+      }
+
+      h1 {
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-name: titleAnimation;
+        animation-direction: reverse;
+      }
+
+      @keyframes titleAnimation {
+        /* from {
+          background: teal;
+          color: white;
+        }
+        to {
+          background: tomato;
+        } */
+
+        0% {
+          background: teal;
+          color: white;
+        }
+
+        50% {
+          background: tomato;
+          color: black;
+        }
+
+        100% {
+          background: yellowgreen;
+          color: red;
+        }
+      }
+      /* div {
+        width: 100px;
+        height: 100px;
+        background: red;
+        margin: 10px;
+        color: white;
+        text-align: center;
+        line-height: 100px;
+        transition: all 1s ease;
+      } */
+
+      /* .rotate:hover {
+        transform: rotate(20deg);
+      } */
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>THIS IS MY TITLE</h1>
+    </header>
+    <div class="grid">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+    </div>
+
+  </body>
+</html> -->

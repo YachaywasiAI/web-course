@@ -1,0 +1,45 @@
+#nave{
+  animation-name: mi_animacion;
+  animation-duration: 10s;
+  animation-delay: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+@keyframes mi_animacion{
+  /* definir en este caso 2 frames */
+  /* inicio */
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  25% {
+    transform: translate(500px, 0);
+  }
+
+  30% {
+    transform: translate(500px, 0) rotate(90deg);
+  }
+
+  50% {
+    transform: translate(450px, 450px) rotate(90deg);
+  }
+
+  63% {
+    transform: translate(500px, 500px) rotate(180deg);
+  }
+
+  75% {
+    transform: translate(0, 500px) rotate(180deg);
+  }
+
+  89% {
+    transform: translate(0, 500px) rotate(270deg);
+  }
+
+  100% {
+    transform: translate(0, 0px) rotate(270deg);
+  }
+
+}

@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #eee;
+  font-family: 'Open Sans';
+}
+
+.cards {
+  padding: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  height: 400px;
+  width: 300px;
+  background: white;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.card-imagen {
+  width: 100%;
+  height: 60%;
+  /* para cortar el contenido que se sobrepasa */
+  overflow: hidden;
+
+  position: relative;
+}
+
+.card-imagen > img {
+  width: 100%;
+  /* moviendo imagen 60px para arriba */
+  transform: translate(0, -60px);
+  /* dato vital importancia */
+}
+
+.card_fotos {
+  position: absolute;
+  bottom: 0;
+  background-color: orange;
+  color: white;
+  padding: 10px;
+  border-top-right-radius: 4px;
+}
+
+.card_fecha {
+  position: absolute;
+  width: 40px;
+  height: 50px;
+  top: 10px;
+  right: 10px;
+  background-color: orangered;
+  color: white;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+/* inferior */
+.card-info {
+  padding: 20px;
+  height: 40%;
+}
+
+.card_subtitulo {
+  color: orangered;
+  margin-top: 4px;
+}
+
+.card_descripcion {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #333;
+  /* visibility es una propiedad que no afecta al DOM */
+  visibility: hidden;
+  /* opacity va de 0 a 1 como un porcentaje */
+  opacity: 0.5;
+}
+
+/* AQUI COMIENZA LA MAGIA */
+/* cuando ponga el mouse encima de card modificare la parte superior */
+.card:hover .card-imagen {
+  height: 40%;
+}
+
+/* cuando ponga el mouse encima de card modificare el img que esta como primer
+hijo de card imagen */
+.card:hover .card-imagen > img {
+  /* brightness me permite modificar el brillo de una imagen con un valor de 0 a 1  */
+  filter: brightness(0.5);
+}
+
+.card:hover .card-info {
+  height: 60%;
+}
+
+.card:hover .card_descripcion {
+  visibility: visible;
+  opacity: 1;
+}
+
+.card:hover {
+  /* box-shadow desplazamientoX desplazamientoY difuminado color */
+  box-shadow: 0 0 20px black;
+  transform: scale(1.05);
+}
+
+/* Y LA CEREZA */
+/* 1. Selecciono card y */
+/* 2. Selecciono todos los elementos que esten dentro de card */
+.card, .card * {
+  transition: all 1s ease;
+}
