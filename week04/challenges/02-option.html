@@ -19,6 +19,7 @@
       display: grid;
       /* grid-template-columns: repeat(10, 10fr); */
       grid-template-columns: repeat(autofill, minmax(50px, 10fr));
+      /* grid-template-rows: repeat(9, minmax(200px, 10fr)); */
       /* grid-template-rows: repeat(9, minmax(100px, auto)); */
       /* grid-template-columns: repeat(autofill, minmax(300px, 1fr)); */
       /* grid-template-rows: minmax(50px, 100px); */
@@ -26,6 +27,7 @@
       /* grid-auto-flow: dense; */
       /* grid-auto-rows: 100px; */
       grid-auto-columns: 10fr;
+      /* grid-auto-rows: 100px; */
       /* max-width: 100%; */
       margin: 10px 10px;
       gap: 12px;
@@ -171,9 +173,14 @@
     }
 
     img {
-      height: 60%;
+      height: 50%;
+      overflow: hidden;
+      /* padding: 50px 50px; */
+      /* height: 100%;
+      object-fit: cover; */
+
       /* min-width: 5%; */
-      min-height: 10%;
+      /* min-height: 10%; */
       /* max-height: 100px;
       max-width: 100px; */
     }
