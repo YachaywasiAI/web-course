@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week06</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* border: 1px solid teal; */
+        }
+
+        .grid {
+            /* margin-top: 50px; */
+            display: grid;
+            grid-template-columns: repeat(3, minmax(350px, 1fr));
+            grid-template-rows: repeat(3, minmax(300px, 1fr));
+            /* grid-auto-rows: 500px; */
+        }
+
+        .firstProblem {
+            grid-column: 1 / 2;
+            /* grid-row: 1 / 2; */
+            /* display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; */
+            /* height: 100%; */
+            /* height: 100%; */
+            /* border: 5px solid teal; */
+        }
+
+        .input {
+            width: 100%;
+        }
+
+        .button {
+            background-color: #139b4d;
+            color: white;
+            border: none;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            padding: 8px;
+            font-weight: 800;
+            cursor: pointer;
+            position: absolute;
+            right: 0px;
+            -webkit-appearance: none;
+        }
+
+        .button:hover {
+            color: black;
+        }
+
+        .containerDiv {
+            height: 50%;
+            margin: 10px 50px;
+            background-color: rgb(216, 216, 216);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* box-shadow: 4px 4px 4px limegreen; */
+        }
+
+        .containerDiv:hover {
+            box-shadow: 4px 4px 4px rgb(196, 196, 196);
+        }
+
+        .div {
+            /* margin-top: 30px; */
+            display: inline-flex;
+            position: relative;
+            width: 80%;
+            /* height: 50%; */
+            /* margin: 50px 50px; */
+            background-color: rgb(216, 216, 216);
+            /* width: 80%; */
+            /* padding-bottom: 10px; */
+        }
+
+        .firstProblem p {
+            /* border: 1px solid green; */
+            /* margin-top: 10px; */
+            font-size: 12px;
+        }
+
+        h4 {
+            text-align: center;
+            margin: 10px 0px;
+            /* margin-bottom: 10px; */
+        }
+
+        .secondProblem {
+            grid-column: 2 / 3;
+            /* grid-row: 2 / 3; */
+            /* display: flex;
+            flex-direction: column; */
+            /* justify-content: center;
+            align-items: center; */
+        }
+
+        li {
+            background-color: #fff;
+            border: rgba(128, 128, 128, 0.507);
+            border-radius: 5px;
+            padding: 10px 5px;
+            margin: 10px 50px;
+            box-shadow: 0 2px 8px rgb(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+        }
+
+        .checked {
+            text-decoration: line-through;
+            color: red;
+        }
+
+        .thirdProblem {
+            grid-column: 3 / 4;
+        }
+
+        .containerClean {
+            display: flex;
+            flex-direction: row;
+            width: 80%;
+        }
+
+        .containerClean p {
+            font-size: 12px;
+            font-weight: 800;
+            margin-top: 12px;
+            padding-right: 8px;
+        }
+
+        .txt-button {
+            cursor: pointer;
+            color: rgb(77, 77, 255);
+        }
+
+        .txt-button:hover {
+            color: rgb(255, 97, 97);
+        }
+
+        .readme {
+            grid-column: 1 / 4;
+            grid-row: 3 / 4;
+            margin-left: 50px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="firstProblem">
+            <h4>Challenge 1</h4>
+            <div class="containerDiv">
+                <div class="div">
+                    <input
+                        type="text"
+                        placeholder="Enter new task"
+                        required
+                        id="first-input"
+                        class="input"
+                    >
+                    <button type="button" id="first-button" class="button">Add</button>
+                </div>
+                <p id="first-message"></p>
+            </div>
+        </div>
+
+        <div class="secondProblem">
+            <h4>Challenge 2</h4>
+            <div class="containerDiv">
+                <div class="div">
+                    <input
+                        type="text"
+                        placeholder="Enter new task"
+                        required
+                        id="second-input"
+                        class="input"
+                    >
+                    <button type="button" id="second-button" class="button">Add</button>
+                </div>
+                <div class="containerClean">
+                    <p>Clean: </p>
+                    <p class="txt-button" id="done-button-2">Done</p>
+                    <p> | </p>
+                    <p class="txt-button" id="all-button-2">All</p>
+                </div>
+            </div>
+            <div class="listContainer">
+                <ul id="task-list-2"></ul>
+            </div>
+        </div>
+
+        <div class="thirdProblem">
+            <h4>Challenge 3</h4>
+            <div class="containerDiv">
+                <div class="div">
+                    <input
+                        type="text"
+                        placeholder="Enter new task"
+                        required
+                        id="third-input"
+                        class="input"
+                    >
+                    <button type="button" id="third-button" class="button">Add</button>
+                </div>
+                <div class="containerClean">
+                    <p>Clean: </p>
+                    <p class="txt-button" id="done-button-3">Done</p>
+                    <p> | </p>
+                    <p class="txt-button" id="all-button-3">All</p>
+                    <p> | </p>
+                    <p class="txt-button" id="recover-button-3">Recover</p>
+                </div>
+            </div>
+            <div class="listContainer">
+                <ul id="task-list-3"></ul>
+            </div>
+        </div>
+
+        <div class="readme">
+            <h3>Readme</h3>
+            <ul>
+                <li>DONE: Change the state of tasks to DONE</li>
+                <li>ALL: Delete all tasks</li>
+                <li>RECOVER: Recover all deleted tasks</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+
+        /* FIRST PROBLEM ALGORITHM */
+        let tasks = []
+        let first_button = document.getElementById("first-button")
+        let first_input = document.querySelector("#first-input")
+        first_button.addEventListener("click", function() {
+            let txt = first_input.value
+            if (txt === "") {
+                alert("you must write something!!!")
+            } else {
+                tasks.push(txt)
+                if (tasks.length == 1) {
+                    document.getElementById("first-message").innerHTML =
+                    `${txt} task pushed.`
+                }
+                else {
+                    document.getElementById("first-message").innerHTML =
+                    `${txt} task pushed. Last task was ${tasks[tasks.length - 2]}.`
+                }
+                first_input.value = ""
+            }
+        })
+
+        /* SECOND PROBLEM ALGORITHM */
+
+        let second_button = document.getElementById("second-button")
+        let second_input = document.querySelector("#second-input")
+        let second_list = document.querySelector("#task-list-2")
+        let done_button_2 = document.getElementById("done-button-2")
+        let all_button_2 = document.getElementById("all-button-2")
+
+        second_button.addEventListener("click", function() {
+            let txt = second_input.value;
+            if (txt === "") {
+                alert("you must write something!!!")
+            }
+            else {
+                let li = document.createElement("li")
+                // let label = document.createElement("label")
+                let checkbox = document.createElement("input");
+                checkbox.type = "checkbox"
+                checkbox.className = "checkbox2"
+                // li.appendChild(label)
+                li.innerHTML = txt
+                li.appendChild(checkbox)
+                // li.innerHTML = txt + "<input type='checkbox'>"
+                // li.innerHTML = txt + str(checkbox)
+                second_list.insertBefore(li, second_list.childNodes[0])
+                // second_list.insertBefore(checkbox, second_list.childNodes[0])
+                second_input.value = ""
+            }
+        })
+
+        second_list.addEventListener("click", function (el) {
+            if (el.target.tagName == "LI") {
+                if (el.target.firstChild.nextSibling.checked) {
+                    el.target.firstChild.nextSibling.checked = false
+                } else {
+                    el.target.firstChild.nextSibling.checked = true
+                }
+                el.target.classList.toggle("checked")
+            }
+            else if (el.target.tagName == "INPUT") {
+                el.target.parentElement.classList.toggle("checked")
+            }
+        })
+
+        done_button_2.addEventListener("click", function(){
+            let checkboxes = document.querySelectorAll(".checkbox2")
+            let children = second_list.childNodes
+            for (let i = 0; i < children.length; i++) {
+                if (children[i].className === "") {
+                    children[i].classList.toggle("checked")
+                }
+                if (!checkboxes[i].checked) {
+                    checkboxes[i].checked = true
+                }
+            }
+
+            // third_list.childNodes.forEach(function(child, index){
+            //     if (child.className === "") {
+            //         child.classList.toggle("checked")
+            //     }
+            // })
+        })
+
+        all_button_2.addEventListener("click", function(){
+            while(second_list.firstChild) {
+                second_list.removeChild(second_list.firstChild)
+            }
+        })
+
+
+        /* THIRD PROBLEM ALGORITHM */
+
+        let third_button = document.getElementById("third-button")
+        let third_input = document.querySelector("#third-input")
+        let third_list = document.querySelector("#task-list-3")
+        let done_button_3 = document.getElementById("done-button-3")
+        let all_button_3 = document.getElementById("all-button-3")
+        let recover_button_3 = document.getElementById("recover-button-3")
+        let backup_tasks = []
+
+        third_button.addEventListener("click", function() {
+            let txt = third_input.value;
+            if (txt === "") {
+                alert("you must write something!!!")
+            }
+            else {
+                let li = document.createElement("li")
+                // let label = document.createElement("label")
+                let checkbox = document.createElement("input");
+                checkbox.type = "checkbox"
+                checkbox.className = "checkbox3"
+                // console.log(checkbox)
+                // li.appendChild(label)
+                li.innerHTML = txt
+                li.appendChild(checkbox)
+                // li.innerHTML = txt + "<input type='checkbox'>"
+                // li.innerHTML = txt + str(checkbox)
+                third_list.insertBefore(li, third_list.childNodes[0])
+                // second_list.insertBefore(checkbox, second_list.childNodes[0])
+                third_input.value = ""
+                backup_tasks.push(txt)
+                localStorage.setItem("bkp_tasks", JSON.stringify(backup_tasks));
+            }
+        })
+
+        third_list.addEventListener("click", function (el) {
+            if (el.target.tagName == "LI") {
+                if (el.target.firstChild.nextSibling.checked) {
+                    el.target.firstChild.nextSibling.checked = false
+                } else {
+                    el.target.firstChild.nextSibling.checked = true
+                }
+                el.target.classList.toggle("checked")
+            }
+            else if (el.target.tagName == "INPUT") {
+                el.target.parentElement.classList.toggle("checked")
+            }
+        })
+
+        done_button_3.addEventListener("click", function() {
+            let checkboxes = document.querySelectorAll(".checkbox3")
+            let children = third_list.childNodes
+            for (let i = 0; i < children.length; i++) {
+                if (children[i].className === "") {
+                    children[i].classList.toggle("checked")
+                }
+                if (!checkboxes[i].checked) {
+                    checkboxes[i].checked = true
+                }
+            }
+
+            // third_list.childNodes.forEach(function(child, index){
+            //     if (child.className === "") {
+            //         child.classList.toggle("checked")
+            //     }
+            // })
+        })
+
+        all_button_3.addEventListener("click", function(){
+            while(third_list.firstChild) {
+                third_list.removeChild(third_list.firstChild)
+            }
+        })
+
+        recover_button_3.addEventListener("click", function() {
+            let array = localStorage.getItem("bkp_tasks")
+            array = JSON.parse(array)
+            if (array.length) {
+                array.forEach(function(txt, index){
+                let li = document.createElement("li")
+                let checkbox = document.createElement("input");
+                checkbox.type = "checkbox"
+                checkbox.className = "checkbox3"
+                li.innerHTML = txt
+                li.appendChild(checkbox)
+                third_list.insertBefore(li, third_list.childNodes[0])
+                third_input.value = ""
+            })
+            }
+        })
+    </script>
+</body>
+</html>
